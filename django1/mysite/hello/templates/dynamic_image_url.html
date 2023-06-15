@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Image URL - Django</title>
+</head>
+<body>
+    <h1>Dynamic Image URL - Django</h1>
+    <form action="{% url 'dynamic_image' %}" method="GET">
+        <input type="text" name="image_url_param" placeholder="Enter Image URL">
+        <button type="submit">Change Image</button>
+    </form>
+    {% if dynamic_image_url %}
+        <img src="{{ dynamic_image_url }}" alt="Dynamic Image">
+    {% endif %}
+</body>
+</html>

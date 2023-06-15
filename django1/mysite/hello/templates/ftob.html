@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Pagination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .pagination a {
+            padding: 5px 10px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .pagination a.current {
+            background-color: #333;
+            color: #fff;
+        }
+        
+        .numbers {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .numbers span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 30px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number Pagination</h1>
+    
+    <div class="pagination" id="pagination"></div>
+    
+    <div class="numbers" id="numberContainer"></div>
+    
+    <script>
+        var currentPage = 1;
+        var numbersPerPage = 100;
+        var totalNumbers = 1000;
+        var totalPages = Math.ceil(totalNumbers / numbersPerPage);
+        
+        function displayNumbers(page) {
+            var start = (page - 1) * numbersPerPage + 1;
+            var end = Math.min(start + numbersPerPage - 1, totalNumbers);
+            
+            var numbersHtml = '';
+            for (var i = start; i <= end; i++) {
+                numbersHtml += '<span>' + i + '</span>';
+            }
+            
+            document.getElementById('numberContainer').innerHTML = numbersHtml;
+        }
+        
+        function displayPagination() {
+            var paginationHtml = '';
+            
+            for (var i = 1; i <= totalPages; i++) {
+                paginationHtml += '<a href="#" onclick="changePage(' + i + ')"';
+                if (i === currentPage) {
+                    paginationHtml += ' class="current"';
+                }
+                paginationHtml += '>' + i + '</a>';
+            }
+            
+            document.getElementById('pagination').innerHTML = paginationHtml;
+        }
+        
+        function changePage(page) {
+            currentPage = page;
+            displayNumbers(currentPage);
+            displayPagination();
+        }
+        
+        displayNumbers(currentPage);
+        displayPagination();
+    </script>
+</body>
+</html>

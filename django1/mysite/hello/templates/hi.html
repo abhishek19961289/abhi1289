@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello, Django</title>
+    </head>
+    <body>
+        <h1>My Dictionary</h1>
+        <ul>
+            {% for key, value in my_dictionary.items %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+       <h1> {{context}} </h1>
+    </body>
+</html>

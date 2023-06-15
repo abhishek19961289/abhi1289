@@ -1,0 +1,163 @@
+
+received
+http://gitlab.monsterindia.noida/users/sign_in
+Username:  abhishekj
+Password :  Foundit@123
+
+
+
+
+https://jira.foundit.in/browse/REC4-5428
+Url : https://jira.foundit.in
+Username:  abhishek.j@foundit.ai
+Password :  foundit@123
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Username:  abhishek.j@foundit.ai
+Password :  foundit@123
+
+
+
+
+
+
+
+
+master data
+
+
+
+https://docs.google.com/spreadsheets/d/13rOrElfcM2Ym5szZj19azLVWHYhUuILKfzrZEjBUt_U/edit?usp=sharing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+py -3 -m venv .venv
+.venv\scripts\activate
+
+python -m pip install --upgrade pip
+python -m pip install django
+django-admin startproject mysite
+cd mysite
+
+python manage.py migrate
+python manage.py startapp blog
+
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver 8000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git init
+git commit
+git add
+git status
+git merge
+git push 
+git pull
+git clone
+git branch
+git check-out
+
+
+
+
+
+
+git config
+git diff
+git log
+git reset  ("-soft , --mixed,--hard")
+git rebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+received
+http://gitlab.monsterindia.noida/users/sign_in
+Url : https://jira.foundit.in
+
+Username:  abhishek.j@foundit.ai
+Password :  foundit@123
